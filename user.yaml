@@ -3,4 +3,3 @@
 
 openssl genrsa -out USER-NAME.key 2048
 openssl req -new -key USER-NAME.key -out USER-NAME.csr -subj "/CN=USER-NAME"
-
