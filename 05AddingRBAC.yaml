@@ -1,0 +1,7 @@
+# Define Role-Based Access Control (RBAC) rules for the user or their group. This will determine what actions the user can perform within the Kubernetes cluster.
+
+   ```bash
+   kubectl create role <role-name> --verb=<verbs> --resource=<resources> --namespace=<namespace>
+   kubectl create rolebinding <rolebinding-name> --role=<role-name> --user=USER-NAME --namespace=<namespace>
+   ```
+# Remember to replace placeholders like `<cluster-name>`, `<role-name>`, `<verbs>`, `<resources>`, `<namespace>`, etc., with actual values relevant to your Kubernetes cluster and user setup.
