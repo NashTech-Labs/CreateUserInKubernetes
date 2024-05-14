@@ -1,5 +1,0 @@
-# Generate Certificates for the User:**
-# Use a tool like OpenSSL to generate a certificate/key pair for the user. For example:
-
-openssl genrsa -out USER-NAME.key 2048
-openssl req -new -key USER-NAME.key -out USER-NAME.csr -subj "/CN=USER-NAME"
