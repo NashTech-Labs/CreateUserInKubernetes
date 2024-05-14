@@ -1,0 +1,8 @@
+# Approve the CSR and sign the certificate using the Kubernetes cluster's Certificate Authority.
+   ```bash
+   kubectl certificate approve USER-NAME-csr
+   ```
+# Retrieve the signed certificate:
+   ```bash
+   kubectl get csr USER-NAME-csr -o jsonpath='{.status.certificate}' | base64 -d > USER-NAME.crt
+   ```   
