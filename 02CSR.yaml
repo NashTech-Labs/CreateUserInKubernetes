@@ -1,0 +1,14 @@
+#Use the generated key to create a Certificate Signing Request (CSR). This CSR will be used to request a certificate signed by the Kubernetes cluster's Certificate Authority (CA).
+   
+#cat <<EOF | kubectl apply -f -
+
+   apiVersion: certificates.k8s.io/v1
+   kind: CertificateSigningRequest
+   metadata:
+     name: USER-NAME-csr
+   spec:
+     request: $(cat USER-NAME.csr | base64 | tr -d '\n')
+     signerName: kubernetes.io/kube-apiserver-client
+     usages:
+     - client auth
+   EOF
